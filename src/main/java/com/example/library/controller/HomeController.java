@@ -1,13 +1,18 @@
 package com.example.library.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-	
-	@RequestMapping("/")
-	public String home() {
-		return "home";
-	}
+
+    /**
+     * "/" で呼び出されるメソッド
+     * @return home.html
+     */
+
+    @GetMapping("/")
+    public String home() {
+        return "home";
+    }
 }
