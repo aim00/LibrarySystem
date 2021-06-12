@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>書籍登録</title>
+</head>
+<body>
+	<h1>書籍登録画面</h1>
+	
+	<form action="/list" method="post">
+		<div>
+			<label for="book_name">書籍名</label>
+			<input type="text" id="book_name" name="book_name">
+		</div>
+		<div>
+			<label for="book_price">値段</label>
+			<input type="text" id="book_price" name="book_price">
+		</div>
+		<input type="submit" value="送信">
+	</form>
+</body>
+</html>
