@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>編集画面</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>書籍名</th>
+			<td>
+				<form method="post">
+					<input type="text" th:field="${newBook.name}" value="${nowBook.name}"/>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<th>値段</th>
+			<td>
+				<form method="post">
+					<input type="text" th:field="${newBook.price}" value="${nowBook.price}"/>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+		 		<form method="post" th:action="@{/edit}">
+		 			<input type="hidden" name="id" th:value="*{id}"/>
+		 			<input type="submit" class="btn btn-default" value="編集完了"/>
+				</form>
+			</td>
+			<td>
+		 		<form method="post" th:action="@{/delete}">
+		 			<input type="hidden" name="id" th:value="*{id}"/>
+		 			<input type="submit" class="btn btn-denger" value="削除"/>
+				</form>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

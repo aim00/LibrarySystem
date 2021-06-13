@@ -13,7 +13,7 @@ public interface BookMapper {
      * 書籍登録メソッド
      * @param book 登録したい書籍のオブジェクト
      */
-    public void regist(Book book);
+    public void register(Book book);
 
     /**
      * 書籍全検索メソッド
@@ -21,4 +21,16 @@ public interface BookMapper {
      */
     public List<Book> findAll();
 
+    /**
+     * idから書籍を検索するメソッド
+     * @param  id
+     * @return    idが一致した書籍
+     */
+    public Book findOne(int id);
+
+    /**
+     * idから書籍を削除するメソッド
+     * @param id
+     */
+    public void delete(int id);
 }

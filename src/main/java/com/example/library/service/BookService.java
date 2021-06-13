@@ -14,12 +14,38 @@ public class BookService {
     @Autowired
     BookMapper bookMapper;
 
-    public void registBook(Book book) {
-        bookMapper.regist(book);
+    /**
+     * BookMapperインターフェースのregisterメソッド
+     * @param book
+     */
+    public void registerBook(Book book) {
+        bookMapper.register(book);
     }
 
+    /**
+     * BookMapperインターフェースのfindAllメソッド
+     * @return
+     */
     public List<Book> findAllBooks() {
         List<Book> bookList = bookMapper.findAll();
         return bookList;
+    }
+
+    /**
+     * BookMapperインターフェースのfindOneメソッド
+     * @param  id
+     * @return
+     */
+    public Book findOneBook(int id) {
+        Book book = bookMapper.findOne(id);
+        return book;
+    }
+
+    /**
+     * BookMapperインターフェースのdeleteメソッド
+     * @param id
+     */
+    public void deleteBook(int id) {
+        bookMapper.delete(id);
     }
 }

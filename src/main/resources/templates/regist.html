@@ -7,7 +7,7 @@
 <body>
 	<h1>書籍登録画面</h1>
 	
-	<form action="/list" th:action="@{/list}" th:object="${bookForm}" method="post">
+	<form method="post" th:action="@{/list}" th:object="${bookForm}">
 		<div>
 			<label for="book_name">書籍名</label>
 			<input type="text" id="book_name" name="book_name" th:field="*{name}">
