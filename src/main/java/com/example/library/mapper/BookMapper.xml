@@ -13,7 +13,7 @@
 	</select>
 	
 	<select id="findOne" resultType="com.example.library.entity.Book">
-		SELECT * FROM book　WHERE id=1;
+		SELECT * FROM book　WHERE id=#{id};
 	</select>
 	
 	<delete id="delete">
